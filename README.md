@@ -33,7 +33,7 @@
 
 - Node.js (v16+)
 - Python (v3.9+)
-- `pip`, `virtualenv`, or `poetry`
+- `pip`, `virtualenv`
 - Access to LLaMA 3.2 model (locally or via API)
 
 ## 🔧 Frontend Setup (React + Vite)
@@ -58,7 +58,7 @@ npm run dev
 
 ### Navigate to backend folder
 ```bash
-cd backend/
+cd server/
 ```
 
 ### Create virtual environment
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 
 ### Run FastAPI server
 ```bash
-uvicorn main:app --reload
+uvicorn app:app --reload
 ```
 ---
 ## ⚠️ Make sure LLaMA 3.2 is accessible to your backend (e.g., via HuggingFace Transformers, Ollama, or API endpoint).
@@ -91,9 +91,9 @@ CodeSensei/
 │   ├── public/
 │   └── vite.config.js
 │
-├── backend/
-│   ├── main.py
-│   └── services/llm_handler.py
+├── server/
+│   ├── app.py
+│   └── venv
 │
 ├── README.md
 └── requirements.txt
